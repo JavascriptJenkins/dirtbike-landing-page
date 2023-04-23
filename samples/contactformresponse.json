@@ -1,0 +1,31 @@
+{
+  "id": 2,
+  "password": "$2a$12$28jDGB29ZcOiQ5jJLFWQpu33w2czAzlBpg8teMjFUtzmM7Jz1pLGa",
+  "name": "\"Peter McMahon\"",
+  "project": "\"hey there\"",
+  "password2": null,
+  "email": "\"unwoundcracker@gmail.com\"",
+  "roles": [
+    "ROLE_CLIENT"
+  ],
+  "phone": "18887776666",
+  "isuseractive": 1,
+  "updatedtimestamp": [
+    2023,
+    2,
+    8,
+    20,
+    53,
+    3,
+    263376000
+  ],
+  "createtimestamp": [
+    2023,
+    2,
+    8,
+    20,
+    53,
+    3,
+    263277000
+  ]
+}

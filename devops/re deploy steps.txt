@@ -1,0 +1,13 @@
+ssh into server
+go into devops directory
+kill the existing deployment with the commands below
+verify the site is down by going to https://techvvs.io
+
+lsof -i tcp:3000
+kill -9 <pid>
+
+then run ./redeploy script
+
+this will pull the main branch and deploy it
+
+sudo systemctl stop nginx
