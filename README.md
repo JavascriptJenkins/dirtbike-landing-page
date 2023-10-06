@@ -83,7 +83,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # _This loads nvm_
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-2)
+npm install
 npm run start --max-old-space-size=8192
 
 
@@ -123,3 +123,8 @@ curl --header "Content-Type: application/json" \
 http://localhost:8080/customer/pipeline
 
 {"name":{"value":"fff"},"email":{"value":"unwoundcracker@gmail.com"},"project":{"value":"ddddd"}}
+
+
+
+Authentication 
+https://manage.auth0.com/dashboard/us/dev-c4crw5imbgu6axa8/onboarding

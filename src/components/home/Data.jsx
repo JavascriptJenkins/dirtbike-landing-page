@@ -4,7 +4,7 @@ const Data = () => {
   return (
     <div className="home__data">
       <h1 className="home__title">
-        TechVVS
+        Delivery VVS
         {/* <svg
           width="36"
           height="36"
@@ -57,7 +57,7 @@ const Data = () => {
       </h1>
       <h3 className="home__subtitle">Very.. Very.. Simple..</h3>
       <p className="home__description">
-        Technology consulting | admin@techvvs.io
+        Delivery Fulfillment Platform | admin@techvvs.io
       </p>
 
       <a href="#contact" className="button button--flex">
