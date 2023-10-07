@@ -23,6 +23,13 @@ const App = () => {
       <Header />
 
       <main className='main'>
+      <Auth0Provider
+          domain="dev-c4crw5imbgu6axa8.us.auth0.com"
+          clientId="cOe5QtuKBI0J8OhZZd3edQN1cyNqfLKZ"
+          authorizationParams={{
+            redirect_uri: window.location.origin
+          }}
+        >
         <Home />
         <About />
         <Dev />
@@ -36,13 +43,7 @@ const App = () => {
         <Contact />
         <Welcome />
 
-        <Auth0Provider
-            domain="dev-c4crw5imbgu6axa8.us.auth0.com"
-            clientId="cOe5QtuKBI0J8OhZZd3edQN1cyNqfLKZ"
-            authorizationParams={{
-              redirect_uri: window.location.origin
-            }}
-          >
+
           <Auth />
           </Auth0Provider>
       </main>
