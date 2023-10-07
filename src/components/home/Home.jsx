@@ -32,7 +32,14 @@ const Home = () => {
               <Data />
             </div>
                  <div>
-                   Hello {user.name}{' '}
+                   Hello {user.name}
+                   {' / nickname: '}{user.nickname}{' '}
+                   {' / email: '}{user.email}{' '}
+                   {' / blocked: '}{user.blocked}{' '}
+                   {' / created_at: '}{user.created_at}{' '}
+                   {' / email_verified: '}{user.email_verified}{' '}
+                   {' / phone_number: '}{user.phone_number}{' '}
+
                    <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                      Log out
                    </button>
@@ -44,7 +51,24 @@ const Home = () => {
 
     );
   } else {
-    return <button onClick={() => loginWithRedirect()}>Log in</button>;
+  return (
+          <section className="home section" id="home">
+            <div className="home__container container grid">
+              <div className="home__content grid">
+                <Social />
+
+                <div className="home__img"></div>
+
+                <Data />
+              </div>
+                   <div>
+                    <button onClick={() => loginWithRedirect()}>Log in</button>
+                   </div>
+              <ScrollDown />
+            </div>
+
+          </section>
+          )
   }
 
 
