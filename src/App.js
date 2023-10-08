@@ -20,35 +20,26 @@ import { Auth0Provider } from '@auth0/auth0-react';
 const App = () => {
   return (
     <>
-      <Header />
 
+
+
+        <Auth0Provider
+            domain="dev-c4crw5imbgu6axa8.us.auth0.com"
+            clientId="cOe5QtuKBI0J8OhZZd3edQN1cyNqfLKZ"
+            authorizationParams={{
+              redirect_uri: window.location.origin
+            }}
+          >
+<Header />
       <main className='main'>
-      <Auth0Provider
-          domain="dev-c4crw5imbgu6axa8.us.auth0.com"
-          clientId="cOe5QtuKBI0J8OhZZd3edQN1cyNqfLKZ"
-          authorizationParams={{
-            redirect_uri: window.location.origin
-          }}
-        >
-        <Home />
-        <About />
-        <Dev />
-        <Skills />
-        <Services />
-        <Qualification />
 
+            <Home />
+            <About />
+            <Auth />
 
-
-
-        <Contact />
-        <Welcome />
-
-
-          <Auth />
-          </Auth0Provider>
       </main>
 
-
+    </Auth0Provider>
       <Footer />
       <ScrollUp />
     </>

@@ -44,7 +44,7 @@ const Home = () => {
                      Log out
                    </button>
                  </div>
-            <ScrollDown />
+
           </div>
 
         </section>
@@ -61,9 +61,7 @@ const Home = () => {
 
                 <Data />
               </div>
-                   <div>
-                    <button onClick={() => loginWithRedirect()}>Log in</button>
-                   </div>
+
               <ScrollDown />
             </div>
 

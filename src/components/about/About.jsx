@@ -3,14 +3,21 @@ import "./about.css";
 import AboutImg from "../../assets/pexels-olia-danilevich-4974914.jpg";
 // import CV from "../../assets/Smith-Cv.pdf";
 import Info from "./Info";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const About = () => {
+    const { isLoading, isAuthenticated, error, user, loginWithRedirect, logout } =
+        useAuth0();
+
+if(isAuthenticated){
+
+
+} else{
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About Us</h2>
       <span className="section__subtitle">
-        We are a specialized technology company
-        based in Minneapolis, Minnesota CST.
+        We are technology platform enabling delivery fulfillment.
 
 
 
@@ -18,9 +25,9 @@ const About = () => {
 
     <span className="section__subtitle">
 
-        Security, Critical Vulnerability <br/>
-        Scanning, and Unit Testing are <br/>
-        our main specializations.
+        Assign employee roles. <br/>
+        Manage your delivery platform. <br/>
+        It's that easy.
     </span>
 
       <div className="about__container container grid">
@@ -30,7 +37,7 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            At TechVVS we provide custom software solutions to common enterprise software problems.  Our in house developer and analyst experts have extensive experience solving enterprise problems.
+            The Delivery VVS platform enables simple delivery fulfillment at a low price.  We believe every business should have access to low cost delivery fulfillment.
           </p>
 
           {/* <a download="" href={CV} className="button button--flex">
@@ -65,6 +72,9 @@ const About = () => {
       </div>
     </section>
   );
+
+}
+
 };
 
 export default About;

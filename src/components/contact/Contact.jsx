@@ -1,19 +1,33 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
+import { useAuth0 } from '@auth0/auth0-react';
 import "./contact.css";
 
 
 
 const Contact = () => {
 
+    const { isLoading, isAuthenticated, error, user, loginWithRedirect, logout } =
+        useAuth0();
+
     const name = {value: ''};
     const email = {value: ''};
-      const project = {value: ''};
-      const message = {value: ''};
+    const project = {value: ''};
+    const message = {value: ''};
 
 
-  const form = useRef();
+   const form = useRef();
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+    if (error) {
+        return <div>Oops... {error.message}</div>;
+    }
+
+
+
 
 
   // what is e?
@@ -63,7 +77,7 @@ const Contact = () => {
       }
     };
 
-
+if (isAuthenticated) {
   return (
 
 
@@ -135,7 +149,7 @@ const Contact = () => {
         <div className="contact__content">
           <h3 className="contact__title">Let us know how we can help!</h3>
 
-{/*  this submits the contact form*/}
+            {/*  this submits the contact form*/}
           <form ref={form} onSubmit={submitCustomerPipelineFormData} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name/CORP</label>
@@ -197,6 +211,11 @@ const Contact = () => {
       </div>
     </section>
   );
+  } else {
+
+  }
+
+
 };
 
 export default Contact;
