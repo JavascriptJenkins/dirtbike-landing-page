@@ -8,6 +8,7 @@ import Welcome from './components/welcome/Welcome';
 import Dev from './components/dev/Dev';
 import Skills from './components/skills/Skills';
 import Services from './components/services/Services';
+import Organization from './components/organization/Organization';
 import Qualification from './components/qualification/Qualification';
 // import Work from './components/Portfolio/Work';
 // import Testimonials from './components/testimonials/Testimonials';
@@ -27,7 +28,8 @@ const App = () => {
             domain="dev-c4crw5imbgu6axa8.us.auth0.com"
             clientId="cOe5QtuKBI0J8OhZZd3edQN1cyNqfLKZ"
             authorizationParams={{
-              redirect_uri: window.location.origin
+              redirect_uri: window.location.origin,
+              audience: "https://techvvs.io/api/read"
             }}
           >
 <Header />
@@ -36,6 +38,7 @@ const App = () => {
             <Home />
             <About />
             <Auth />
+            <Organization />
 
       </main>
 
