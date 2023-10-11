@@ -2,8 +2,11 @@ import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import { useAuth0 } from '@auth0/auth0-react';
+import Home  from '../home/Home.jsx'
 import "./organization.css";
 
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
 const Organization = () => {
@@ -12,8 +15,10 @@ const Organization = () => {
         useAuth0();
 
 
+const [activeNav, setActiveNav] = useState("#home");
     const name = {value: ''};
     const description = {value: ''};
+//     const navigation = useNavigate()
 
 
    const form = useRef();
@@ -34,9 +39,12 @@ const Organization = () => {
       e.preventDefault();
       try {
 
+console.log(name)
+console.log(description)
+console.log(description)
       console.log(JSON.stringify({
-                                    name:name,
-                                    description:description
+                                    name:name.value,
+                                    description:description.value
                                   }));
 
 
@@ -54,8 +62,8 @@ const Organization = () => {
                 'Content-Type': 'application/json'
             },
           body: JSON.stringify({
-            name:name,
-            description:description
+            name:name.value,
+            description:description.value
           }),
 
 
@@ -65,7 +73,12 @@ const Organization = () => {
 
         console.log("resJson: " +resJson)
         if (res.status === 200) {
-          alert("Thank you for organizationing TechVVS!")
+        document.getElementsByClassName('organization section')[0].style.visibility = 'hidden';
+//             window.location.href = 'http://localhost:3000/';
+           // this.setActiveNav("#home")
+
+//            navigation("/dashboard",{state :{ name : "home"}, replace:true})
+//         alert("Thank you for organizationing TechVVS!")
           // setName("");
           // setEmail("");
           // setMessage("User created successfully");

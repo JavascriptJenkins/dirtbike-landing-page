@@ -10,12 +10,16 @@ import Skills from './components/skills/Skills';
 import Services from './components/services/Services';
 import Organization from './components/organization/Organization';
 import Qualification from './components/qualification/Qualification';
+import Dashboard from './components/qualification/Qualification';
 // import Work from './components/Portfolio/Work';
 // import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
 import { Auth0Provider } from '@auth0/auth0-react';
+
+//import { BrowserRouter, Routes, Route } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 
 const App = () => {
@@ -39,8 +43,11 @@ const App = () => {
             <About />
             <Auth />
             <Organization />
+            <Dashboard />
 
       </main>
+
+
 
     </Auth0Provider>
       <Footer />

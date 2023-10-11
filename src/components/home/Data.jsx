@@ -13,7 +13,7 @@ const Data = () => {
           <h1 className="home__title">
             Delivery VVS
           </h1>
-          <h3 className="home__subtitle">Very.. Very.. Simple..</h3>
+          <h3 className="home__subtitle"> Very.. Very.. Simple..</h3>
           <p className="home__description">
             Delivery Fulfillment Platform | admin@techvvs.io
           </p>
