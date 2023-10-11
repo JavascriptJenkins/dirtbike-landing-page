@@ -39,9 +39,7 @@ const [activeNav, setActiveNav] = useState("#home");
       e.preventDefault();
       try {
 
-console.log(name)
-console.log(description)
-console.log(description)
+
       console.log(JSON.stringify({
                                     name:name.value,
                                     description:description.value
@@ -73,7 +71,7 @@ console.log(description)
 
         console.log("resJson: " +resJson)
         if (res.status === 200) {
-        document.getElementsByClassName('organization section')[0].style.visibility = 'hidden';
+//         document.getElementsByClassName('organization section')[0].style.visibility = 'hidden';
 //             window.location.href = 'http://localhost:3000/';
            // this.setActiveNav("#home")
 
@@ -102,62 +100,7 @@ if (isAuthenticated) {
 
       <div className="organization__container container grid">
         <div className="organization__content">
-          {/* <h3 className="organization__title">Talk to us</h3>
 
-          <div className="organization__info">
-            <div className="organization__card">
-              <i className="bx bx-mail-send organization__card-icon"></i>
-
-              <h3 className="organization__card-title">Email</h3>
-              <span className="organization__card-data">user@gmail.com</span>
-
-              <a
-                href="mailto:examplemail@gmail.com.com"
-                className="organization__button"
-              >
-                Write me{" "}
-                <i className="bx bx-right-arrow-alt organization__button-icon"></i>
-              </a>
-            </div>
-
-            <div className="organization__card">
-              <i className="bx bxl-whatsapp organization__card-icon"></i>
-
-              <h3 className="organization__card-title">Whatsapp</h3>
-              <span className="organization__card-data">999-888-777</span>
-
-              <a
-                href="https://api.whatsapp.com/send?phone=62214408789&text=Hello, more information!"
-                className="organization__button"
-              >
-                Write me{" "}
-                <i className="bx bx-right-arrow-alt organization__button-icon"></i>
-              </a>
-            </div>
-
-            <div className="organization__card">
-              <i className="bx bxl-messenger organization__card-icon"></i>
-
-              <h3 className="organization__card-title">Messenger</h3>
-              <span className="organization__card-data">user.fb123</span>
-
-              <a href="https://m.me/crypticalcoder" className="organization__button">
-                Write me{" "}
-                <i className="bx bx-right-arrow-alt organization__button-icon"></i>
-              </a>
-            </div>
-          </div> */}
-{/*           <iframe */}
-{/*             width="100%" */}
-{/*             height="100%" */}
-{/*             title="map" */}
-{/*             className="absolute inset-0" */}
-{/*             frameBorder={0} */}
-{/*             marginHeight={0} */}
-{/*             marginWidth={0} */}
-{/*             style={{ filter: "opacity(0.7)" }} */}
-{/*             src="https://www.google.com/maps/embed/v1/place?q=300 N Washington Ave, Minneapolis, MN 55401, Estados Unidos&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" */}
-{/*           /> */}
         </div>
 
         {/*  This is where we will call the java server running on host 8080 */}
@@ -176,17 +119,6 @@ if (isAuthenticated) {
                 onChange={(e) => name.value = e.target.value}
               />
             </div>
-
-{/*             <div className="organization__form-div"> */}
-{/*               <label className="organization__form-tag">Mail</label> */}
-{/*               <input */}
-{/*                 type="email" */}
-{/*                 name="email" */}
-{/*                 onChange={(e) => email.value = e.target.value} */}
-{/*                 className="organization__form-input" */}
-{/*                 placeholder="Insert your email" */}
-{/*               /> */}
-{/*             </div> */}
 
             <div className="organization__form-div organization__form-area">
               <label className="organization__form-tag">Description</label>
